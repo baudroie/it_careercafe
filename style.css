@@ -299,19 +299,58 @@ section {
   text-align: center;
 }
 
-.message-heading {
-  font-size: 2rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--black);
-  line-height: 1.6;
+.message-main .section-header {
   margin-bottom: 2rem;
 }
 
-.message-sub-text {
-  font-size: 1.4rem;
+.message-main .section-title-text {
+  font-size: 3.2rem;
+  line-height: 1.4;
+}
+
+.message-main .section-title-text br {
+  display: block;
+}
+
+.message-main .section-title-text .small-text {
+  font-size: 0.6em;
+  font-weight: var(--font-weight-medium);
+  vertical-align: baseline;
+}
+
+.message-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.message-tags span {
+  background: #fff;
+  color: var(--red);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  border: 1.5px solid var(--red);
+  box-shadow: 2px 2px 0 var(--pink-bg);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.message-description {
+  font-size: 1.6rem;
   line-height: 1.8;
   color: var(--text-color);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.message-description:last-of-type {
+  margin-bottom: 4rem;
 }
 
 .message-image {
@@ -325,15 +364,32 @@ section {
   display: block;
 }
 
-/* --- PC・タブレット向けの調整（768px以上） --- */
 @media screen and (min-width: 768px) {
   .message-heading {
-    font-size: 2.4rem;
-    line-height: 1.8;
+    font-size: 4.2rem;
+    line-height: 1.4;
   }
 
-  .message-sub-text {
-    font-size: 1.6rem;
+  .message-heading br {
+    display: none;
+  }
+
+  .message-tags {
+    gap: 1.5rem;
+  }
+
+  .message-tags span {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  .message-description {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .message-description:last-of-type {
+    margin-bottom: 5rem;
   }
 }
 
