@@ -562,21 +562,6 @@ section {
   padding: 0 1rem;
 }
 
-.section-title-wrapper {
-  background: var(--black);
-  padding: 1rem 2rem;
-  width: fit-content;
-  border-radius: 0 2rem 2rem 0;
-  margin-bottom: 2rem;
-  margin-left: -1rem;
-}
-
-.section-title-text-simple {
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
 .recruit-items {
   width: 100%;
   background-color: var(--white);
@@ -674,6 +659,59 @@ section {
   line-height: 1.8;
   color: var(--black);
   font-weight: var(--font-weight-medium);
+}
+
+/* oooooooooooooooooooooooo */
+/* リンクセクション (Links) */
+/* oooooooooooooooooooooooo */
+#links {
+  padding: 0 2rem;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 340px;
+  padding: 1.4rem;
+  margin: 0 auto;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.link-btn.site {
+  background: linear-gradient(90deg, #f19603, #ff6b35);
+  /* Warm Orange Gradient */
+}
+
+.link-btn.media {
+  background: #ff9e00;
+  /* Bright Orange */
+}
+
+.link-btn.insta {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.link-btn:active {
+  transform: scale(0.98);
+}
+
+.link-btn:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* --- 3列（サンドイッチ）レイアウト設定 --- */
