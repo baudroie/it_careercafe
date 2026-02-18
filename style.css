@@ -111,7 +111,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 9rem;
   background-color: #333;
   color: #fff;
   padding-top: 1.5rem;
@@ -120,7 +120,7 @@ footer {
 .copy {
   font-weight: var(--font-weight-regular);
   font-size: 1.2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
 }
 
 /* -----------foot-banner----------- */
@@ -178,6 +178,69 @@ section {
   margin-bottom: 6rem;
 }
 
+/* oooooooooooooooooooooooo */
+/* Header */
+/* oooooooooooooooooooooooo */
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo .logo-img {
+  height: 2rem;
+  width: auto;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--red);
+}
+
+.header-btn {
+  background: var(--btn-color);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  transition: transform 0.2s;
+  white-space: nowrap;
+}
+
+.header-btn:active {
+  transform: scale(0.98);
+}
+
 /* PC only visibility */
 .pc-only {
   display: none;
@@ -203,23 +266,23 @@ section {
 .top-img {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: auto;
   overflow: hidden;
 }
 
 .top-img-back {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: 1;
 }
 
 .top-img-back img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 /* 画像の上にフィルターをかける */
@@ -230,7 +293,6 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
 }
 
 .top-logo-img {
@@ -280,17 +342,30 @@ section {
   width: 100%;
   z-index: 5;
   margin: -2rem 0 3rem 0;
-  background: #f19603;
+  background: var(--red);
   padding: 2rem;
   text-align: center;
   transform: skewY(-3deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+  transition: clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.top-sub-title.in-view {
+  clip-path: inset(0 0 0 0);
+  transition-delay: 1s;
 }
 
 .top-sub-title-main {
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: var(--font-weight-bold);
   line-height: 1.6;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  transform: translateX(-1rem);
 }
 
 /* メッセージエリア全体 */
@@ -323,7 +398,7 @@ section {
   flex-wrap: nowrap;
   justify-content: center;
   gap: 0.6rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   padding: 0 0.5rem;
   width: 100%;
 }
@@ -339,6 +414,20 @@ section {
   box-shadow: 2px 2px 0 var(--pink-bg);
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+/* Keihin (prize) visual */
+.keihin-visual {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-bottom: 2.5rem;
+}
+
+.keihin-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .message-description {

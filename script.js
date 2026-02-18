@@ -19,3 +19,19 @@ function scrollAdd(scrollY) {
         foot_banner.classList.remove("active");
     }
 }
+
+// Subtitle Animation
+const subtitle = document.querySelector('.top-sub-title');
+if (subtitle) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                subtitle.classList.add('in-view');
+            } else {
+                subtitle.classList.remove('in-view'); // Toggle off to replay
+            }
+        });
+    }, { threshold: 0 }); // Trigger immediately when any part is visible
+
+    observer.observe(subtitle);
+}
